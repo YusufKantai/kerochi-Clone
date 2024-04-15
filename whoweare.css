@@ -1,0 +1,317 @@
+*{
+    padding:0px;
+    margin: 0px;
+    list-style: none;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+body{
+    width: 100%;
+       
+
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgb(208, 208, 54);
+    width: 50vw;
+    height: 100vh;
+    overflow-y: auto; /* Enable scrolling for nav */
+    scroll-behavior: smooth;
+    animation-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+    display: none;
+}
+
+nav::-webkit-scrollbar {
+    display: none; /* Hide the scrollbar */
+}
+
+nav .top {     
+    top: 0;
+    width: 50%;   
+    background-color: rgb(208, 208, 54);
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    height: 40px;
+}
+
+nav .top i {
+    padding: 10px;
+    float: right;
+    color: #fff;
+    font-size: 30px;
+    padding: 10px 30px;
+}
+
+nav .ul {
+    margin: 100px 30px;
+}
+
+nav .ul a {
+    color: rgb(58, 3, 3);
+}
+
+nav .ul li {
+    margin: 25px 0px;
+    font-size: 15px;
+    font-family: Arial;
+}
+
+nav .dropdown span {
+    display: flex;
+    justify-content: space-between;
+}
+nav .dropdown ul{
+    display: none;
+}
+
+nav .dropdown ul li {
+    font-size: 11px;
+    margin: 20px;
+}
+nav .footer{
+    width: 100%;   
+    background-color: rgba(200, 200, 10, 0.603);
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    height: 40px;
+}
+
+
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:rgb(234, 208, 65);
+    padding: 5px 20px;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+}
+header .left i{
+    font-size: 25px;
+}
+header .center ul{
+    display: flex;
+    justify-content: space-between;
+    display: none;
+}
+header .center ul li{
+    color:#5e422f;
+    font-weight: 500;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    margin: 0px 12px;
+    font-size: 16px;
+    transition: 0.5s ease;
+}
+header .center ul li:hover{
+    color: #fff;
+}
+header .right img{
+    height: 50px;   
+}
+@media screen and (min-width: 1024px){
+    
+    header .left i{
+        display: none;
+
+    }
+    header .center ul{
+        display:flex;
+    }
+    header .right img{
+        height: 120px;  
+        width: 100px; 
+    }
+
+}
+
+/* main======================= */
+main .top{
+    background-color:rgba(0, 0, 0, 0.368);
+    height: 60px;
+        
+}
+main .industry {
+    background-image: url(images/NAIVASHA_14-2.jpg);
+    height: 110vh;
+    padding: 100px 10px;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    overflow: hidden; /* Prevents content from overflowing */
+}
+
+.industry p{
+    color: #ffff;
+    line-height: 48px;
+    font-size: 22px;  
+    font-family: Arial;
+    padding: 30px 0px;
+    
+}
+@media screen and (min-width: 1024px){
+    .industry p{
+        width: 60%;
+        font-size: 28px;
+        line-height: 55px;
+    }
+}
+
+main .year{
+    /* height: 90vh; */
+    display: flex;
+    flex-direction:column;
+    padding: 30;
+    width: 100%;
+}
+.year .left{
+    background-color: rgb(214, 211, 38);
+    padding:100px 20px;
+    /* width: 100%; */
+    text-align: center;    
+}
+.year .left  h1{
+    color: #fff;
+    font-size: 70px;
+    font-weight: 500;
+}
+.year .left h2{
+    font-weight: 500;
+    line-height: 50px;
+    margin-top: 70px;
+    font-size: 25px;
+}
+.year .right{
+    padding: 100px 30px;
+    /* width: 100%; */
+}
+.year .right p{
+    font-weight: 500;
+    color: grey;
+    line-height: 50px;
+    font-size: 23px;
+    margin: auto;
+}
+@media screen and (min-width: 1024px){
+    main .year{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .year .left{
+        /* width: 300px; */
+        padding: 100px 50px ;
+    }
+    .year .right{
+        width: 70%;
+    }
+    .year .left  h1{
+        margin-top: 70px;
+    }
+    .year .left h2{
+        margin-top: 30px;
+    }
+
+
+}
+main .grapes{
+    background-image: url(images/vineyard-1920x1278.jpg);
+    background-position:right;
+    background-attachment: fixed;
+    padding: 50px 10px;    
+}
+.grapes p{
+    color: #fff;
+    line-height: 40px;
+    margin: 45px 0px;
+    font-size: 23px;
+    font-weight: 100;
+    word-spacing: 5px;
+    letter-spacing: 2px;
+}
+
+
+main .mission{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    background-image: url(images/Mission-BG.jpg);
+    padding: 20px 0px;
+    background-position: top;
+    background-attachment: fixed;
+    padding-top: 200px;
+    
+    
+}
+.mission .divs{
+    margin-top: 50px;
+    text-align: center;
+    
+}
+.mission .divs .top {
+    background-color: #f2101000;
+    padding: 0px;
+    margin: 0;
+}
+.mission .divs .top  h2{
+    font-size: 17px;
+    font-weight: 500;
+    padding: 5px 0px;
+}
+.mission .divs .top .line{
+    width: 15%;
+    height: 0.5px;
+    background-color: rgb(248, 224, 7);
+    margin: auto;
+}
+.mission .divs p{
+    line-height: 40px;
+    font-size: 17px;
+    margin-top: -20px;
+    word-spacing: 4px;
+    padding: 10px 20px;
+    letter-spacing: 2px;
+}
+@media screen and (min-width: 1024px){
+    main .mission{
+        flex-direction: row;
+        justify-content:space-between;       
+    }
+    .mission .divs{
+        padding: 0px 30px;
+        height: 100vh;                 
+        border: 0.5px solid rgba(128, 128, 128, 0.116);
+        border-top: none;
+        border-bottom: none;
+    }
+    .mission .divs .top  h2{
+        font-size: 30px;
+    }
+    .mission .divs .top .line{
+        width: 30%;
+    }
+    .mission .divs p{
+        margin-top: 10px;
+        font-size: 20px;
+        width: 100%;
+        padding: 0px;
+        line-height: 50px;
+       
+        
+    }
+    
+
+}
