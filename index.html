@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/Keroche-Footer-Color-Logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="images/Keroche-Footer-Color-Logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="index.css"><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway+Dots&family=Whisper&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7bfc1bd144.js" crossorigin="anonymous"></script>
+
+    <title>Kerochi Breweries - Truly Kenyan</title>
+</head>
+<body>    
+    <nav id="nav">
+        <div class="top"><i class="fa-solid fa-xmark" onclick="hideNav()"></i></div>        
+        <ul class="ul">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="whoweare.html">Who We Are</a></li>
+            <li><a href="#">CEOs Pen</a></li>
+            <li class="dropdown">
+                <span>
+                    <a href="#">Products</a>
+                    <i class="fa-solid fa-plus" id="plus" onclick="hideUl()"></i>
+                </span>
+                <ul id="dropdownul" >
+                    <li><a href="#">Sumit Lager</a></li>
+                    <li><a href="#">Sumt Malt</a></li>
+                    <li><a href="#">Valley Wines</a></li>
+                    <li><a href="#">Souvignon Blanc</a></li>
+                    <li><a href="#">Pinotage</a></li>
+                    <li><a href="#">Chenin Blanc</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Keroche Foundation</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Careers</a></li>
+        </ul>
+        <div class="footer"></div>
+    </nav>
+    <div class="background-container"></div>
+    <main>
+        <img src="images/keroche-logo.png" alt="">       
+        <h6>The Home of Quality</h6>
+        <button>STAFF EMAIL</button>
+    </main>
+    <footer>
+        <div class="left"><i class="fa-solid fa-bars" onclick="hideNav()" ></i></div>
+        <div class="center">
+            <ul>
+                <a href="index.html"><li style="color:#5e422f;">HOME</li></a>
+                <a href="whoweare.html"><li>WHO WE ARE</li></a>
+                <a href="#"><li>CEOS PEN</li></a>
+                <a href="#"><li>PRODUCTS</li></a>
+                <a href="#"><li>KEROCHE FOUNDATION</li></a>
+                <a href="#"><li>CONTACT</li></a>
+                <a href="#"><li>EVENTS</li></a>
+                <a href="#"><li>CAREERS</li></a>
+            </ul>
+        </div>
+        <div class="logo">
+            <img src="images/Keroche-Footer-Color-Logo.png" alt="" height="80px">
+            <h1>KEROCHE</h1>
+            <h2>BREWERIES</h2>
+        </div>
+    </footer> 
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const backgroundContainer = document.querySelector('.background-container');
+            backgroundContainer.classList.add('zoom-effect');
+        });
+
+        
+        let hideNav = () => {
+            let nav = document.getElementById('nav');
+            if (nav.style.display === 'none' || nav.style.display === '') {
+                nav.style.display = 'block';
+            } else {
+                nav.style.display = 'none';
+            }
+        }
+
+        let hideUl = () => {
+            let plusIcon = document.getElementById('plus');
+            let dropdownul = document.getElementById('dropdownul');
+            if (dropdownul.style.display === 'none' || dropdownul.style.display === '') {
+                dropdownul.style.display = 'block';
+                plusIcon.classList.remove('fa-plus');
+                plusIcon.classList.add('fa-xmark');
+            } else {
+                dropdownul.style.display = 'none';
+                plusIcon.classList.remove('fa-xmark');
+                plusIcon.classList.add('fa-plus');
+            }
+        }
+
+    </script>
+</body>
+</html>
